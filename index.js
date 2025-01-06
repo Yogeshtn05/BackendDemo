@@ -1,31 +1,31 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import router from './routes/userRoute.js';
+import bodyParser from 'body-parser';
+import userRouter from './routes/userRoute.js'; // Import your router
+
+dotenv.config(); // Load environment variables
 
 const app = express();
+
+// Middleware
 app.use(cors());
-//bodyParser - middleware for passing json value from backend to database  
-app.use(bodyParser.json());
-dotenv.config();
+app.use(bodyParser.json()); // Body parser middleware for JSON data
 
+// Routes
+app.use('/api', userRouter); // API routes defined in userRoute.js
 
-app.use('/api',router);
-
-
-const port=process.env.PORT ||3500;
-const M_URL=process.env.MONGO_URL;
-
-mongoose.connect(M_URL).then(()=>{
+// Connect to MongoDB
+const PORT = process.env.PORT || 3500;
+const MONGO_URI = process.env.MONGO_URL  // MongoDB connection URL
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
     console.log('Database connected');
-    app.listen(port,()=>{
-        console.log(`Server is running on port ${port}`);
+    app.listen(PORT, () => {
+      console.log('Server running on port ',{PORT});
     });
-})
-
-
-
-
-
+  })
+  .catch(err => {
+    console.log('Error connecting to MongoDB', err);
+  });
