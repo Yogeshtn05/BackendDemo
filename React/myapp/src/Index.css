@@ -1,0 +1,19 @@
+table{
+    align-items: center;
+    align-items: center;
+    align-content: center;
+}
+tr,td{
+    background-color: aqua;
+    border-radius: 2px;
+    border-color: black;
+}
+button{
+    color: rgb(46, 53, 53);
+    background-color: azure;
+    border-radius: 50px;
+}
+form{
+    flex-direction: row;
+    padding-left: 10px;
+}

@@ -1,0 +1,88 @@
+/* 
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding:10px ;
+    border-radius: 20px;
+}
+h2{
+    color: rgb(33, 18, 18);
+}
+button{
+    padding: 10px 40px;
+    margin:30px 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    background-color: green;
+}
+.butt{
+    padding: 0px 90px 0px 90px;
+    align-items: center;
+    text-align: center;
+}
+.butt1{
+    background-color: rgb(207, 46, 46);
+    color: #ffffff;
+}
+.butt1:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(207, 46, 46);
+}
+input::placeholder{
+    padding: 5px;
+    font-size:15px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+button:hover{
+    background-color: rgb(255, 255, 255);
+    color: green;
+}
+.div3{
+    padding:10px 10px 10px 15px;
+    border-radius: 20px;
+    background: #ffffff;
+    align-items: center;
+flex-direction: row;
+}
+label{
+    color:rgb(24, 23, 23);
+
+}
+.div1{
+    opacity: 90%;
+    background: rgb(139, 192, 225);
+  padding: 30px 20px 20px 30px;
+  margin:0px 150px 0px 150px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.div2{
+    background: #ffffff;
+    padding:5px 15px 80px 15px;
+    border-radius: 20px;
+}
+.div4{
+    width: 50%;
+    text-align: column;
+    background: #ffffff;
+    padding:10px 10px 10px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+option{
+    font-size: 15px;
+    font-weight: 700;
+}
+.div5{
+    display: flex;
+    background: #ffffff;
+    padding:10px 10px 10px 15px;
+    border-radius: 20px;
+    flex-direction: column;
+    font-weight: 700;
+} */

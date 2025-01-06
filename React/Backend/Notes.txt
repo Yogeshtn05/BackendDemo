@@ -1,0 +1,46 @@
+MVC - Model View Controller
+
+Backend :
+	1. npm init -y
+	2. npm i express
+	3. npm i nodemon
+	4. npm i ejs
+	(Database Connection):
+		5. npm i dotenv
+		6. npm i mongoose
+		7. npm i body-parser
+		8. npm i axios
+
+	(Database Connection to Backend):
+		import express from 'express';
+		import mongoose from 'mongoose';
+		import bodyParser from 'body-parser';
+		import dotenv from 'dotenv';
+
+		const app = express();
+
+		//bodyParser - middleware for passing json value from backend to database  
+		app.use(bodyParser.json());
+		dotenv.config();
+
+		const port=process.env.PORT ||3500;
+		const M_URL=process.env.MONGO_URL;
+
+		mongoose.connect(M_URL).then(()=>{
+			console.log('Database connected');
+			app.listen(port,()=>{
+				console.log(`Server is running on port ${port}`);
+			});
+		})
+
+
+
+
+
+
+
+	Status Code-(100 - Information,200 - Success,300 - ,400 - sever side error,500 - client side server)
+
+	HTTP methods-(get,post,put - (it update whole data),delete,patch - (it update the particular data))
+
+	
