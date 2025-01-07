@@ -3,14 +3,17 @@ import User from '../Model/Usermodel.js';
 // Fetch all users
 export const fetch = async (req, res) => {
   try {
-    const users = await User.find();
-    if (users) {
-      res.status(200).json(users);
+    const users = await User.find({}); // Fetch all users from the database
+    console.log("Fetched users:", users); // Debug: Log users fetched from DB
+
+    if (users && users.length > 0) {
+      return res.status(200).json({ users }); // Respond with users
     } else {
-      res.status(400).json({ message: "No users found" });
+      return res.status(404).json({ message: "No users found" }); // 404 for no users
     }
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error("Error in fetch API:", error.message); // Log the error for debugging
+    return res.status(500).json({ message: "Internal Server Error" }); // 500 for server errors
   }
 };
 

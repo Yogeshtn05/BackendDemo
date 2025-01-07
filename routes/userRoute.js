@@ -3,7 +3,7 @@ import { fetch, update, check, deleteid, addUser } from '../controller/Usercontr
 const router = express.Router();
 
 // Existing routes
-router.post('/fetch', fetch);
+router.get('/fetch', fetch);
 router.put('/update/:id', update);
 router.get('/check', check);
 router.delete('/delete/:id', deleteid);
